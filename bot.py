@@ -1,5 +1,5 @@
 import os
-from urllib import request
+import requests as re
 from bs4 import BeautifulSoup
 from pyrogram import Client, filters
 from pyrogram.types import (
@@ -36,7 +36,7 @@ def start(client, message):
     msg_id = message.chat.id
     html_url = message.text
     try:
-    	page = request.urlopen(html_url)
+    	page = re.get(html_url)
     	soup = BeautifulSoup(page.txt,'html.parser')
     except Exception as e:
     	ms.edit("```Error : {e}```")

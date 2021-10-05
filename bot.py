@@ -39,7 +39,7 @@ def start(client, message):
     	page = re.get(html_url)
     	soup = BeautifulSoup(page.txt,'html.parser')
     except Exception as e:
-    	ms.edit("```Error : {e}```")
+    	ms.edit(f"```Error : {e}```")
     	return
     f = open(f"{msg_id}.txt" , "w")
     f.write(str(soup.prettify()))

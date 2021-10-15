@@ -37,7 +37,7 @@ def start(client, message):
     html_url = message.text
     try:
     	page = re.get(html_url)
-    	soup = BeautifulSoup(page.txt,'html.parser')
+    	soup = BeautifulSoup(page,'html.parser')
     except Exception as e:
     	ms.edit(f"```Error : {e}```")
     	return

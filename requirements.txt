@@ -1,4 +1,4 @@
 TgCrypto
-Pyrogram==1.6.4
+Pyrogram==1.4.16
 beautifulsoup4
 requests
